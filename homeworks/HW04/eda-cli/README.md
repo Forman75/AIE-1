@@ -144,7 +144,8 @@ http://127.0.0.1:8000/docs
 
 - вызывать `GET /health`;
 - вызывать `POST /quality` (форма для JSON);
-- вызывать `POST /quality-from-csv` (форма для загрузки файла).
+- вызывать `POST /quality-from-csv` (форма для загрузки файла);
+- вызывать `POST /quality-flags-from-csv` (форма для загрузки файла).
 
 ---
 
@@ -244,6 +245,44 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
 - `flags` - булевы флаги из `compute_quality_flags`;
 - `dataset_shape` - реальные размеры датасета (`n_rows`, `n_cols`);
 - `latency_ms` - время обработки запроса.
+
+---
+
+### 5. `POST /quality-flags-from-csv` – детальные флаги качества (HW04)
+
+**Дополнительный эндпоинт**, реализованный в рамках домашнего задания.  
+Принимает CSV-файл и возвращает **полный набор "сырых" флагов качества**, рассчитанных ядром `core.py`.
+
+В отличие от стандартного `/quality-from-csv` (который фильтрует ответ), этот метод позволяет увидеть детальную работу эвристик, добавленных в HW03, например:
+* `has_constant_columns` (список константных колонок);
+* `suspicious_id_duplicates` (флаг наличия дубликатов по ID);
+* `high_cardinality_categoricals` (список признаков с высокой кардинальностью).
+
+**Запрос:**
+
+```http
+POST /quality-flags-from-csv
+Content-Type: multipart/form-data
+file: <CSV-файл>
+```
+
+**Пример ответа `200 OK`:**
+
+```json
+{
+  "flags": {
+	"too_few_rows": true,
+	"too_many_columns": false,
+	"max_missing_share": 0.25,
+	"too_many_missing": false,
+	"constant_columns": ["col_const"],
+	"high_cardinality_categoricals": [],
+	"suspicious_id_duplicates": true,
+	"many_zero_values": {"price": true},
+	"quality_score": 0.45
+  }
+}
+```
 
 ---
 
