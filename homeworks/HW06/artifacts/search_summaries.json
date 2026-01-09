@@ -1,0 +1,33 @@
+{
+  "DecisionTree": {
+    "scoring": "roc_auc",
+    "cv_folds": 3,
+    "best_cv_score": 0.7594623592591333,
+    "best_params": {
+      "model__ccp_alpha": 0.0,
+      "model__max_depth": null,
+      "model__min_samples_leaf": 10
+    }
+  },
+  "RandomForest": {
+    "scoring": "roc_auc",
+    "cv_folds": 3,
+    "best_cv_score": 0.8792384812117149,
+    "best_params": {
+      "model__max_depth": 15,
+      "model__max_features": "sqrt",
+      "model__min_samples_leaf": 5
+    }
+  },
+  "HistGradientBoosting": {
+    "scoring": "roc_auc",
+    "cv_folds": 3,
+    "best_cv_score": 0.8984968576256724,
+    "best_params": {
+      "model__l2_regularization": 0.1,
+      "model__learning_rate": 0.05,
+      "model__max_depth": null,
+      "model__max_iter": 200
+    }
+  }
+}
