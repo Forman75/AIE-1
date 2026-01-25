@@ -13,7 +13,7 @@
 ## 2. Protocol
 
 - Разбиение: train/test с долей теста 25% (test_size=0.25), фиксированный random_state=42, стратификация по целевой переменной (stratify=y)
-- Подбор: CV на train через StratifiedKFold с 3 фолдами (для ускорения), согласованный критерий: ROC-AUC для бинарной классификации
+- Подбор: CV на train через StratifiedKFold с 5 фолдами, согласованный критерий: ROC-AUC для бинарной классификации
 - Метрики: accuracy, F1 (для бинарной задачи), ROC-AUC и Average Precision для оценки качества модели, особенно в случае дисбаланса классов.
 
 ## 3. Models
@@ -23,7 +23,7 @@
 3. DecisionTreeClassifier — решающее дерево с контролем сложности (параметры: `max_depth`, `min_samples_leaf`, `ccp_alpha`).
 4. RandomForestClassifier — случайный лес с настройками для `max_depth`, `min_samples_leaf`, `max_features` и меньшим количеством деревьев для ускорения.
 5. HistGradientBoostingClassifier — улучшенная версия бустинга, с возможностью ранней остановки для улучшения производительности.
-Гиперпараметры подбирались для всех моделей с помощью GridSearchCV с 3 фолдами на train.
+Гиперпараметры подбирались для всех моделей с помощью GridSearchCV с 5 фолдами на train.
 
 ## 4. Results
 

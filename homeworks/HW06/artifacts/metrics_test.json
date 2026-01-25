@@ -11,22 +11,22 @@
     "roc_auc": 0.8397074049287998,
     "average_precision": 0.5079496062232429
   },
-  "DecisionTree(best)": {
-    "accuracy": 0.96608,
-    "f1": 0.5583333333333333,
-    "roc_auc": 0.7724920402893722,
-    "average_precision": 0.5006869895516962
+  "DecisionTree(bestCV)": {
+    "accuracy": 0.96848,
+    "f1": 0.5887265135699373,
+    "roc_auc": 0.8279721414238741,
+    "average_precision": 0.557023857486179
   },
-  "RandomForest(best)": {
-    "accuracy": 0.9688,
-    "f1": 0.5346062052505967,
-    "roc_auc": 0.9071357045022174,
-    "average_precision": 0.7615037825012982
+  "RandomForest(bestCV)": {
+    "accuracy": 0.97264,
+    "f1": 0.6157303370786517,
+    "roc_auc": 0.9028660439210503,
+    "average_precision": 0.7716508125329228
   },
-  "HistGradientBoosting(best)": {
-    "accuracy": 0.97968,
-    "f1": 0.742393509127789,
-    "roc_auc": 0.9039693592933082,
-    "average_precision": 0.7961629065421405
+  "HistGradientBoosting(bestCV)": {
+    "accuracy": 0.97904,
+    "f1": 0.7342799188640974,
+    "roc_auc": 0.9105969248578103,
+    "average_precision": 0.7869500124840647
   }
 }

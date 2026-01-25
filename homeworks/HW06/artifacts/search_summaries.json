@@ -1,33 +1,32 @@
 {
   "DecisionTree": {
-    "scoring": "roc_auc",
-    "cv_folds": 3,
-    "best_cv_score": 0.7594623592591333,
     "best_params": {
       "model__ccp_alpha": 0.0,
       "model__max_depth": null,
-      "model__min_samples_leaf": 10
-    }
+      "model__max_leaf_nodes": null,
+      "model__min_samples_leaf": 20,
+      "model__min_samples_split": 2
+    },
+    "best_cv_score": 0.7944797313188933,
+    "scoring": "roc_auc"
   },
   "RandomForest": {
-    "scoring": "roc_auc",
-    "cv_folds": 3,
-    "best_cv_score": 0.8792384812117149,
     "best_params": {
-      "model__max_depth": 15,
+      "model__max_depth": 20,
       "model__max_features": "sqrt",
-      "model__min_samples_leaf": 5
-    }
+      "model__min_samples_leaf": 1
+    },
+    "best_cv_score": 0.884885246211822,
+    "scoring": "roc_auc"
   },
   "HistGradientBoosting": {
-    "scoring": "roc_auc",
-    "cv_folds": 3,
-    "best_cv_score": 0.8984968576256724,
     "best_params": {
       "model__l2_regularization": 0.1,
-      "model__learning_rate": 0.05,
+      "model__learning_rate": 0.1,
       "model__max_depth": null,
       "model__max_iter": 200
-    }
+    },
+    "best_cv_score": 0.8968149558171072,
+    "scoring": "roc_auc"
   }
 }

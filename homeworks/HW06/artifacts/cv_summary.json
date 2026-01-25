@@ -1,0 +1,7 @@
+{
+  "DummyClassifier": 0.5,
+  "LogisticRegression": 0.8198032551937532,
+  "DecisionTree": 0.7944797313188933,
+  "RandomForest": 0.884885246211822,
+  "HistGradientBoosting": 0.8968149558171072
+}

@@ -1,18 +1,23 @@
 {
-  "timestamp_utc": "2026-01-09T08:54:03.670590+00:00",
+  "timestamp_utc": "2026-01-25T00:37:17.753545+00:00",
   "dataset_file": "S06-hw-dataset-04.csv",
-  "best_model_name": "RandomForest(best)",
-  "winner_metric": "roc_auc",
+  "selection_rule": "winner selected by CV on TRAIN only; TEST used only for final evaluation",
+  "primary_scoring": "roc_auc",
+  "cv_folds": 5,
+  "cv_summary": {
+    "DummyClassifier": 0.5,
+    "LogisticRegression": 0.8198032551937532,
+    "DecisionTree": 0.7944797313188933,
+    "RandomForest": 0.884885246211822,
+    "HistGradientBoosting": 0.8968149558171072
+  },
+  "best_model_name": "HistGradientBoosting",
   "best_model_test_metrics": {
-    "accuracy": 0.9688,
-    "f1": 0.5346062052505967,
-    "roc_auc": 0.9071357045022174,
-    "average_precision": 0.7615037825012982
+    "accuracy": 0.97904,
+    "f1": 0.7342799188640974,
+    "roc_auc": 0.9105969248578103,
+    "average_precision": 0.7869500124840647
   },
   "random_state": 42,
-  "test_size": 0.25,
-  "label_encoder_classes": [
-    "0",
-    "1"
-  ]
+  "test_size": 0.25
 }
