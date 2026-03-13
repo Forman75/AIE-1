@@ -1,0 +1,10 @@
+{
+    "architecture": "MLP 3072 -> 256 -> 128 -> 10",
+    "use_batchnorm": true,
+    "use_dropout": false,
+    "dataset": "CIFAR10",
+    "seed": 42,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "early_stopping_patience": 4
+}
