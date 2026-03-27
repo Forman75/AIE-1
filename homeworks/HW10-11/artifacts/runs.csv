@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,"SimpleCNN, no augmentations",Adam,0.001,10,0.571,,,,,baseline CNN
+C2,classification,STL10,42,"SimpleCNN, augmented train",Adam,0.001,10,0.57,,,,,"same CNN as C1, only train augmentations changed"
+C3,classification,STL10,42,"ResNet18 pretrained, backbone frozen, fc only",Adam,0.001,6,0.923,,,,,head-only transfer learning
+C4,classification,STL10,42,"ResNet18 pretrained, layer4 + fc trainable",Adam,0.0001,6,0.95,0.94775,,,,partial fine-tuning
+V1,segmentation,OxfordIIITPet,42,"DeepLabV3_ResNet50 pretrained, cat+dog as foreground",,,0,,,0.9783410864994126,0.9750239580570357,0.9575971634010164,"threshold=0.5, border ignored in metric"
+V2,segmentation,OxfordIIITPet,42,"DeepLabV3_ResNet50 pretrained, cat+dog as foreground",,,0,,,0.9813484201591546,0.9704335501788595,0.9562603364399161,"threshold=0.6 + morphology, border ignored in metric"
