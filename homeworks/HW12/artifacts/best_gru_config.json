@@ -11,8 +11,8 @@
   "optimizer": "Adam",
   "lr": 0.001,
   "scaler": "StandardScaler(target_only_fit_on_train)",
-  "best_epoch": 11,
-  "best_val_mae": 6.796276580719721,
+  "best_epoch": 15,
+  "best_val_mae": 6.593561785561698,
   "split_summary": "train: 2025-01-01 00:00:00 -> 2025-05-04 23:00:00 (2976 rows); val: 2025-05-05 00:00:00 -> 2025-06-01 23:00:00 (672 rows); test: 2025-06-02 00:00:00 -> 2025-06-29 23:00:00 (672 rows)",
   "dataset": "S12-hw-dataset.csv"
 }
