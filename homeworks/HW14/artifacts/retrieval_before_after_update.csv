@@ -1,0 +1,5 @@
+﻿query,before_retrieved_sources,after_retrieved_sources,changed
+Где обычно хранится кэш моделей sentence-transformers на Windows?,KB005 | KB009 | KB012,KB013 | KB005 | KB009,True
+Почему шаблонный генератор в mini-RAG может отвечать сухо?,KB011 | KB009 | KB001,KB014 | KB011 | KB009,True
+Нужен ли GPU для зачета HW14?,KB002 | KB001 | KB003,KB015 | KB002 | KB001,True
+Что обязательно нужно сохранить в artifacts?,KB010 | KB008 | KB002,KB010 | KB008 | KB002,False
