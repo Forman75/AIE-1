@@ -1,0 +1,34 @@
+# секреты
+.env
+*.env
+!configs/.env.example
+
+# виртуальные окружения
+.venv/
+venv/
+env/
+
+# кэши Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# артефакты обучения
+artifacts/model.joblib
+artifacts/metrics.json
+artifacts/model_comparison.csv
+artifacts/plots/
+artifacts/experiments/
+
+# данные
+# демонстрационная выборка sample_customers.csv коммитится (открытая, синтетическая),
+# крупные/сырые данные — нет
+data/*.csv
+!data/sample_customers.csv
+
+# системное
+.DS_Store
+.idea/
+.vscode/

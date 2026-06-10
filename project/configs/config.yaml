@@ -1,0 +1,25 @@
+# Основная конфигурация проекта.
+# Здесь — общие параметры, не относящиеся к секретам.
+# Секреты и переменные окружения см. в configs/.env.example
+
+project:
+  name: "Прогноз оттока клиентов"
+  description: "Сервис прогнозирования оттока клиентов телеком-оператора"
+  target_column: "churn"
+  id_column: "customer_id"
+
+# Параметры синтетического датасета (генерируется детерминированно).
+data:
+  n_customers: 7000          # размер полного датасета для обучения
+  sample_size: 200           # размер демонстрационной выборки data/sample_customers.csv
+  random_state: 42           # seed для воспроизводимости
+  test_size: 0.2             # доля тестовой выборки
+  target_churn_rate: 0.26    # ориентировочная доля оттока (несбалансированность)
+
+# Пути к артефактам (относительно каталога artifacts/).
+paths:
+  model_file: "model.joblib"
+  metrics_file: "metrics.json"
+  comparison_file: "model_comparison.csv"
+  plots_dir: "plots"
+  experiments_dir: "experiments"

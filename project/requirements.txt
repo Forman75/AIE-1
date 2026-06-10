@@ -1,0 +1,28 @@
+# Зависимости проекта.
+# Проект рассчитан на Python 3.13 (минимально поддерживается 3.10).
+# Версии пакетов ниже имеют готовые сборки (wheels) для Python 3.13.
+# Установка: pip install -r requirements.txt
+
+# работа с данными и ML
+numpy>=2.1.0
+pandas>=2.2.3
+scikit-learn>=1.5.2
+scipy>=1.14.1
+joblib>=1.4.2
+
+# сервис (REST API)
+Flask>=3.1.0
+waitress>=3.0.2          # production WSGI-сервер (используется в Docker)
+
+# конфигурация
+PyYAML>=6.0.2
+
+# визуализация (EDA, графики обучения)
+matplotlib>=3.9.2
+seaborn>=0.13.2
+
+# тесты
+pytest>=8.3.0
+
+# ноутбуки (для запуска notebooks/)
+jupyter>=1.1.1

@@ -1,0 +1,14 @@
+.git/
+.gitignore
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+notebooks/
+tests/
+artifacts/
+data/
+.env
+*.md

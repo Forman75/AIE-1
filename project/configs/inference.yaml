@@ -1,0 +1,12 @@
+# Параметры инференса (используются сервисом при ответе /predict).
+
+# Пороги для категоризации риска оттока по вероятности.
+# probability < low_max            -> "low"
+# low_max <= probability < high_min -> "medium"
+# probability >= high_min          -> "high"
+risk_thresholds:
+  low_max: 0.35
+  high_min: 0.65
+
+# Сколько ключевых факторов возвращать в ответе /predict.
+top_factors: 5

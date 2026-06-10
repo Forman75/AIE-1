@@ -1,0 +1,27 @@
+# docker-compose для запуска сервиса одной командой.
+#
+#   docker compose up --build
+#
+# Сервис будет доступен на http://localhost:8000
+
+services:
+  churn-prediction:
+    build: .
+    image: churn-prediction:latest
+    container_name: churn-prediction
+    ports:
+      - "8000:8000"
+    environment:
+      # Переменные окружения; секреты — через файл .env (не коммитится).
+      LOG_LEVEL: "INFO"
+      SERVICE_HOST: "0.0.0.0"
+      SERVICE_PORT: "8000"
+    env_file:
+      - .env          # необязательный файл; создаётся из configs/.env.example
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

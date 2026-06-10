@@ -1,0 +1,45 @@
+# Параметры обучения и сравнения моделей.
+# Меняя этот файл, можно переобучить проект без изменения кода.
+
+# Схема кросс-валидации на обучающей выборке.
+cross_validation:
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+
+# Метрика, по которой выбирается финальная модель (по результатам CV).
+selection_metric: "roc_auc"
+
+# Реестр моделей. Каждая запись — модель-кандидат.
+# type: logistic_regression | random_forest | gradient_boosting
+models:
+
+  baseline:
+    type: "logistic_regression"
+    enabled: true
+    params:
+      C: 1.0
+      max_iter: 1000
+      class_weight: "balanced"
+      random_state: 42
+
+  random_forest:
+    type: "random_forest"
+    enabled: true
+    params:
+      n_estimators: 300
+      max_depth: 12
+      min_samples_leaf: 20
+      class_weight: "balanced"
+      n_jobs: -1
+      random_state: 42
+
+  gradient_boosting:
+    type: "gradient_boosting"
+    enabled: true
+    params:
+      n_estimators: 250
+      learning_rate: 0.05
+      max_depth: 3
+      subsample: 0.9
+      random_state: 42

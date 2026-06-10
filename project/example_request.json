@@ -1,0 +1,16 @@
+{
+  "senior_citizen": 0,
+  "tenure": 2,
+  "monthly_charges": 89.5,
+  "total_charges": 178.6,
+  "num_support_calls": 4,
+  "partner": "No",
+  "dependents": "No",
+  "contract": "Month-to-month",
+  "internet_service": "Fiber optic",
+  "online_security": "No",
+  "tech_support": "No",
+  "streaming_tv": "Yes",
+  "payment_method": "Electronic check",
+  "paperless_billing": "Yes"
+}
